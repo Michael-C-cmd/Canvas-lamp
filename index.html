@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A Lamp</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .off {
+        background-color: black;
+      }
+
+      .on {
+        background-image: linear-gradient(
+          to bottom,
+          black,
+          black,
+          black,
+          black,
+          black,
+          rgb(20, 20, 20),
+          #47410cfb
+        );
+      }
+
+      #myCanvas {
+        /* background-color: rgb(46, 44, 44); */
+        background-image: linear-gradient(to bottom, rgb(24, 23, 23), black);
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <canvas id="myCanvas"></canvas>
+    </div>
+    <div>
+      <button id="turnOnBtn">Turn the light on!</button>
+      <button id="turnOffBtn">Turn the light off!</button>
+    </div>
+    <p id="hiddenMessage">Hello, how are you?</p>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
